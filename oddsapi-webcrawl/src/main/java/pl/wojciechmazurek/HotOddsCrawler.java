@@ -161,7 +161,7 @@ public class HotOddsCrawler implements OddsCrawler {
         if (!matchFixture[0].equals("")) {
             setHourAndMinuteOfGame(match, matchFixture);
         } else {
-            int howManyMinutesPassed = Integer.parseInt(games.get(loopIterationForGamesList).select("td.cell-score").text().substring(0, 2));
+            int howManyMinutesPassed = Integer.parseInt(games.get(loopIterationForGamesList).select("td.cell-score").text().substring(0, 2).replaceAll("[^0-9]", ""));
             match.setDate(DateTime.now().minusMinutes(howManyMinutesPassed).minuteOfDay().roundFloorCopy());
         }
 
