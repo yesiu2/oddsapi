@@ -2,48 +2,31 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <properties>
-        <project.build.sourceEncoding>${project-build-sourceEncoding}</project.build.sourceEncoding>
-        <maven.compiler.source>${maven-compiler-source}</maven.compiler.source>
-        <maven.compiler.target>${maven-compiler-target}</maven.compiler.target>
-
-    </properties>
     <parent>
         <artifactId>oddsapi</artifactId>
         <groupId>pl.wojciechmazurek</groupId>
-        <version>${project-version}</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>oddsapi-webcrawl</artifactId>
+    <artifactId>oddsapi-repository</artifactId>
 
-    <name>oddsapi-webcrawl</name>
+    <name>oddsapi-repository</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>pl.wojciechmazurek</groupId>
-            <artifactId>oddsapi-domain</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

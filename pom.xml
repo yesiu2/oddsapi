@@ -11,6 +11,8 @@
     <modules>
         <module>oddsapi-webcrawl</module>
         <module>oddsapi-app</module>
+        <module>oddsapi-repository</module>
+        <module>oddsapi-domain</module>
     </modules>
 
     <properties>
@@ -28,6 +30,11 @@
     <dependencyManagement>
         <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
         <dependencies>
+            <dependency>
+                <groupId>pl.wojciechmazurek</groupId>
+                <artifactId>oddsapi-domain</artifactId>
+                <version>${project-version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.jsoup</groupId>
                 <artifactId>jsoup</artifactId>

@@ -1,5 +1,6 @@
 package pl.wojciechmazurek
 
+import pl.wojciechmazurek.domain.Match
 import spock.lang.Specification
 import static org.assertj.core.api.Assertions.*
 class HotOddsCrawlerSpec extends Specification {
@@ -20,7 +21,19 @@ class HotOddsCrawlerSpec extends Specification {
 
         assertThat(matchList).isNotNull()
 
-        assertThat(firstMatch.country).isNotEmpty()
+        for (int i = 0; i < matchList.size(); i++) {
+            assertThat(matchList.get(i).country).isNotEmpty()
+            assertThat(matchList.get(i).awayTeam).isNotEmpty()
+            assertThat(matchList.get(i).homeTeam).isNotEmpty()
+            assertThat(matchList.get(i).league).isNotEmpty()
+            assertThat(matchList.get(i).bookmaker).isNotEmpty()
+            assertThat(matchList.get(i).date).isNotNull()
+            assertThat(matchList.get(i).awayWin).isNotEmpty()
+            assertThat(matchList.get(i).homeWin).isNotEmpty()
+            assertThat(matchList.get(i).draw).isNotEmpty()
+        }
+
+        /*assertThat(firstMatch.country).isNotEmpty()
         assertThat(firstMatch.awayTeam).isNotEmpty()
         assertThat(firstMatch.homeTeam).isNotEmpty()
         assertThat(firstMatch.league).isNotEmpty()
@@ -38,7 +51,7 @@ class HotOddsCrawlerSpec extends Specification {
         assertThat(lastMatch.date).isNotNull()
         assertThat(lastMatch.awayWin).isNotEmpty()
         assertThat(lastMatch.homeWin).isNotEmpty()
-        assertThat(lastMatch.draw).isNotEmpty()
+        assertThat(lastMatch.draw).isNotEmpty()*/
 
 
 

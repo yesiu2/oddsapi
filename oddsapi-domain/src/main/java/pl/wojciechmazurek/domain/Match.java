@@ -1,4 +1,4 @@
-package pl.wojciechmazurek;
+package pl.wojciechmazurek.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

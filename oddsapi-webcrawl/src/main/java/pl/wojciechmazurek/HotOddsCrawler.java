@@ -4,6 +4,7 @@ import org.joda.time.DateTime;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import pl.wojciechmazurek.domain.Match;
 
 import java.io.IOException;
 
